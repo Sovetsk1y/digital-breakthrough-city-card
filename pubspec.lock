@@ -166,7 +166,7 @@ packages:
     source: hosted
     version: "0.2.1"
   peanut:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: peanut
       url: "https://pub.dartlang.org"
