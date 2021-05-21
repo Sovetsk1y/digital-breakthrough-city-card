@@ -25,19 +25,21 @@ class _WelcomePageState extends State<WelcomePage> {
       body: Column(
         children: [
           Expanded(
+              flex: 4,
               child: Column(
-            children: [
-              const Spacer(),
-              _buildWelcomeInfo(),
-              const Spacer(),
-              SvgPicture.asset(
-                waveSvgPath,
-                width: MediaQuery.of(context).size.width,
-                fit: BoxFit.cover,
-              )
-            ],
-          )),
+                children: [
+                  const Spacer(),
+                  _buildWelcomeInfo(),
+                  const Spacer(),
+                  SvgPicture.asset(
+                    waveSvgPath,
+                    width: MediaQuery.of(context).size.width,
+                    fit: BoxFit.cover,
+                  )
+                ],
+              )),
           Expanded(
+            flex: 6,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18),
               child: Column(
@@ -101,7 +103,7 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
             const SizedBox(height: 2),
             Text(
-              subtitle,
+              description,
               style: secondaryTextRegular13.copyWith(
                 color: Colors.white.withOpacity(0.71),
               ),
@@ -137,7 +139,8 @@ class _WelcomePageState extends State<WelcomePage> {
         const SizedBox(height: 16),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32),
-          child: Text(subtitle, style: primaryTextBold20),
+          child: Text(subtitle,
+              style: primaryTextBold20, textAlign: TextAlign.center),
         )
       ],
     );
