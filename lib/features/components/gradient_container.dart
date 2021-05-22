@@ -1,9 +1,21 @@
+import 'package:city_card_novoros/domain/role.dart';
 import 'package:city_card_novoros/features/components/gradients.dart';
 import 'package:flutter/material.dart';
 
 enum RoleGradient { tourist, citizen, student }
 
 extension RoleGradientExt on RoleGradient {
+  static RoleGradient fromRole(Role role) {
+    switch (role) {
+      case Role.citizen:
+        return RoleGradient.citizen;
+      case Role.tourist:
+        return RoleGradient.tourist;
+      case Role.student:
+        return RoleGradient.student;
+    }
+  }
+
   Gradient get gradient {
     switch (this) {
       case RoleGradient.citizen:

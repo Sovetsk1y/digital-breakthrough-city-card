@@ -61,6 +61,12 @@ const primaryTextRegular13 = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: 13.0);
 
+const primaryTextMedium16 = TextStyle(
+    fontFamily: 'SF Pro Text',
+    color: AppColors.textPrimary,
+    fontWeight: FontWeight.w500,
+    fontSize: 16.0);
+
 const secondaryTextSemiBold15 = TextStyle(
     fontFamily: 'SF Pro Rounded',
     color: AppColors.textSecondary,
@@ -88,3 +94,9 @@ const secondaryTextRegular15 = TextStyle(
     color: AppColors.textSecondary,
     fontWeight: FontWeight.w400,
     fontSize: 15.0);
+
+const secondaryTextRegular17 = TextStyle(
+    fontFamily: 'SF Pro Text',
+    color: AppColors.textSecondary,
+    fontWeight: FontWeight.w400,
+    fontSize: 17.0);

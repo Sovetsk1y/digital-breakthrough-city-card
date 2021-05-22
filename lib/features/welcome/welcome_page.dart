@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:city_card_novoros/domain/role.dart';
 import 'package:city_card_novoros/features/components/bouncing_button.dart';
 import 'package:city_card_novoros/features/components/gradient_container.dart';
+import 'package:city_card_novoros/features/components/role_provider.dart';
 import 'package:city_card_novoros/features/parking/parking_map_page.dart';
 import 'package:city_card_novoros/features/tab_bar_page.dart';
 import 'package:city_card_novoros/features/welcome/welcome_page_widget_model.dart';
@@ -20,6 +23,14 @@ class WelcomePage extends StatefulWidget {
 class _WelcomePageState extends State<WelcomePage> {
   static const title = 'Привет!';
   static const subtitle = 'Выбери наиболее подходищий тебе вариант';
+
+  void navigateToTabBarPage({required Role role}) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => RoleProvider(
+              child: TabBarPage(),
+              role: role,
+            )));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,8 +59,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   BouncingButton(
-                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => ParkingMapPage())),
+                    onTap: () => navigateToTabBarPage(role: Role.citizen),
                     child: RoleGradientContainer(
                       borderRadius: BorderRadius.circular(20),
                       roleGradient: RoleGradient.citizen,
@@ -61,8 +71,8 @@ class _WelcomePageState extends State<WelcomePage> {
                   ),
                   const SizedBox(height: 16),
                   BouncingButton(
-                    onTap: () => Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => TabBarPage())),
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ParkingMapPage())),
                     child: RoleGradientContainer(
                       borderRadius: BorderRadius.circular(20),
                       roleGradient: RoleGradient.tourist,

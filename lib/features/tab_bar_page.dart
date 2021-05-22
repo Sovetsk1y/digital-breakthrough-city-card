@@ -1,3 +1,4 @@
+import 'package:city_card_novoros/features/feedback/feedback_page.dart';
 import 'package:city_card_novoros/utils/svg_paths.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +24,7 @@ class _TabBarPageState extends State<TabBarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           _buildCurrentPage(),
@@ -49,6 +51,8 @@ class _TabBarPageState extends State<TabBarPage> {
         return Scaffold();
       case 1:
         return Scaffold();
+      case 2:
+        return FeedbackPage();
       default:
         return Scaffold();
     }

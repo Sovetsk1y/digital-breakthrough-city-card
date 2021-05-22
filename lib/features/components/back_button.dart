@@ -28,7 +28,7 @@ class AppBackButton extends StatelessWidget {
         child: Center(
             child: Icon(
           CupertinoIcons.arrow_left,
-          size: 22,
+          size: 26,
           color: Colors.white,
         )),
       ),
