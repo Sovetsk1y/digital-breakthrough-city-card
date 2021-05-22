@@ -16,6 +16,7 @@ dependencies:
 
   # Animations
   flip_card: ^0.5.0
+  modal_bottom_sheet: ^2.0.0
 
   # CI/CD
   peanut: ^4.0.1

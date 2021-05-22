@@ -7,3 +7,4 @@ const sportSvgPath = 'assets/icons/sport.svg';
 const cafeSvgPath = 'assets/icons/cafe.svg';
 const cultureSvgPath = 'assets/icons/culture.svg';
 const parkingSvgPath = 'assets/icons/parking.svg';
+const timerSvgPath = 'assets/icons/timer.svg';

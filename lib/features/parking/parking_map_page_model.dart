@@ -22,20 +22,20 @@ Future<Uint8List> getBytesFromAsset({
 final Set<ParkingPlace> parkingPoints = {
   ParkingPlace(
     id: '0',
-    latitude: 44.725592,
-    longitude: 37.766016,
+    latitude: 44.736838,
+    longitude: 37.770532,
     address: 'Address 1',
   ),
   ParkingPlace(
     id: '1',
-    latitude: 44.735592,
-    longitude: 37.766016,
+    latitude: 44.736828,
+    longitude: 37.770332,
     address: 'Address 2',
   ),
   ParkingPlace(
     id: '2',
-    latitude: 44.721592,
-    longitude: 37.762016,
+    latitude: 44.736708,
+    longitude: 37.770832,
     address: 'Address 3',
   ),
   ParkingPlace(
