@@ -2,6 +2,7 @@ import 'package:city_card_novoros/domain/role.dart';
 import 'package:city_card_novoros/features/components/bouncing_button.dart';
 import 'package:city_card_novoros/features/components/gradient_container.dart';
 import 'package:city_card_novoros/features/parking/parking_map_page.dart';
+import 'package:city_card_novoros/features/tab_bar_page.dart';
 import 'package:city_card_novoros/features/welcome/welcome_page_widget_model.dart';
 import 'package:city_card_novoros/utils/styles.dart';
 import 'package:city_card_novoros/utils/svg_paths.dart';
@@ -60,6 +61,8 @@ class _WelcomePageState extends State<WelcomePage> {
                   ),
                   const SizedBox(height: 16),
                   BouncingButton(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => TabBarPage())),
                     child: RoleGradientContainer(
                       borderRadius: BorderRadius.circular(20),
                       roleGradient: RoleGradient.tourist,
