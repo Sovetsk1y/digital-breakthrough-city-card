@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'components/app_tab_bar.dart';
+import 'home/home_page.dart';
 
 class TabBarPage extends StatefulWidget {
   const TabBarPage({Key? key}) : super(key: key);
@@ -50,7 +51,7 @@ class _TabBarPageState extends State<TabBarPage> {
       case 0:
         return Scaffold();
       case 1:
-        return Scaffold();
+        return HomePage();
       case 2:
         return FeedbackPage();
       default:

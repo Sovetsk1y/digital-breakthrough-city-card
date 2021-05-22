@@ -12,6 +12,11 @@ const primaryTextBold20 = TextStyle(
     color: AppColors.textPrimary,
     fontWeight: FontWeight.w600,
     fontSize: 20.0);
+const primaryTextBold25 = TextStyle(
+    fontFamily: 'SF Pro Rounded',
+    color: AppColors.textPrimary,
+    fontWeight: FontWeight.w700,
+    fontSize: 25.0);
 const primaryTextBold28 = TextStyle(
     fontFamily: 'SF Pro Rounded',
     color: AppColors.textPrimary,
