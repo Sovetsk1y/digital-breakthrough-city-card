@@ -33,6 +33,11 @@ const primaryTextSemiBold13 = TextStyle(
     color: AppColors.textPrimary,
     fontWeight: FontWeight.w600,
     fontSize: 13.0);
+const primaryTextSemiBold14 = TextStyle(
+    fontFamily: 'SF Pro Rounded',
+    color: AppColors.textPrimary,
+    fontWeight: FontWeight.w600,
+    fontSize: 14.0);
 const primaryTextSemiBold15 = TextStyle(
     fontFamily: 'SF Pro Rounded',
     color: AppColors.textPrimary,

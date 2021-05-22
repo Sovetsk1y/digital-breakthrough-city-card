@@ -43,42 +43,39 @@ class _AppTabBarState extends State<AppTabBar> {
         color: AppColors.tabBarGrey,
       ),
       child: ClipRect(
-        child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 40, sigmaY: 40),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: widget.items
-                .map(
-                  (item) => Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          _currentIndex = widget.items.indexOf(item);
-                        });
-                        if (widget.onChanged != null) {
-                          widget.onChanged!(_currentIndex);
-                        }
-                      },
-                      child: Container(
-                        height: tabBarHeight,
-                        color: Colors.transparent,
-                        child: Center(
-                          child: SvgPicture.asset(
-                            item,
-                            width: 44,
-                            height: 44,
-                            fit: BoxFit.cover,
-                            color: _currentIndex == widget.items.indexOf(item)
-                                ? Colors.black
-                                : AppColors.grey2,
-                          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: widget.items
+              .map(
+                (item) => Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _currentIndex = widget.items.indexOf(item);
+                      });
+                      if (widget.onChanged != null) {
+                        widget.onChanged!(_currentIndex);
+                      }
+                    },
+                    child: Container(
+                      height: tabBarHeight,
+                      color: Colors.transparent,
+                      child: Center(
+                        child: SvgPicture.asset(
+                          item,
+                          width: 44,
+                          height: 44,
+                          fit: BoxFit.cover,
+                          color: _currentIndex == widget.items.indexOf(item)
+                              ? Colors.black
+                              : AppColors.grey2,
                         ),
                       ),
                     ),
                   ),
-                )
-                .toList(),
-          ),
+                ),
+              )
+              .toList(),
         ),
       ),
     );

@@ -71,8 +71,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   ),
                   const SizedBox(height: 16),
                   BouncingButton(
-                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => ParkingMapPage())),
+                    onTap: () => navigateToTabBarPage(role: Role.tourist),
                     child: RoleGradientContainer(
                       borderRadius: BorderRadius.circular(20),
                       roleGradient: RoleGradient.tourist,
@@ -84,6 +83,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   ),
                   const SizedBox(height: 16),
                   BouncingButton(
+                    onTap: () => navigateToTabBarPage(role: Role.student),
                     child: RoleGradientContainer(
                       borderRadius: BorderRadius.circular(20),
                       roleGradient: RoleGradient.student,

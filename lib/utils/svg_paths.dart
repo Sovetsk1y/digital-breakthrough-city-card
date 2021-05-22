@@ -3,3 +3,7 @@ const doubleWaveSvgPath = 'assets/icons/double_wave.svg';
 const settingsSvgPath = 'assets/icons/settings.svg';
 const profileSvgPath = 'assets/icons/profile.svg';
 const cardSvgPath = 'assets/icons/card.svg';
+const sportSvgPath = 'assets/icons/sport.svg';
+const cafeSvgPath = 'assets/icons/cafe.svg';
+const cultureSvgPath = 'assets/icons/culture.svg';
+const parkingSvgPath = 'assets/icons/parking.svg';
