@@ -10,9 +10,16 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # UI
   cupertino_icons: ^1.0.2
   flutter_svg: ^0.22.0
+
+  # CI/CD
   peanut: ^4.0.1
+
+  # Maps
+  google_maps_flutter: ^2.0.5
+  google_maps_flutter_web: ^0.3.0
 
 dev_dependencies:
   flutter_test:

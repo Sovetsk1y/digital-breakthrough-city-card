@@ -1,6 +1,7 @@
 import 'package:city_card_novoros/domain/role.dart';
 import 'package:city_card_novoros/features/components/bouncing_button.dart';
 import 'package:city_card_novoros/features/components/gradient_container.dart';
+import 'package:city_card_novoros/features/parking/parking_map_page.dart';
 import 'package:city_card_novoros/features/welcome/welcome_page_widget_model.dart';
 import 'package:city_card_novoros/utils/styles.dart';
 import 'package:city_card_novoros/utils/svg_paths.dart';
@@ -43,9 +44,11 @@ class _WelcomePageState extends State<WelcomePage> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   BouncingButton(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ParkingMapPage())),
                     child: RoleGradientContainer(
                       borderRadius: BorderRadius.circular(20),
                       roleGradient: RoleGradient.citizen,
@@ -77,7 +80,6 @@ class _WelcomePageState extends State<WelcomePage> {
                           description: roleDescription(role: Role.student)),
                     ),
                   ),
-                  const SizedBox(height: 32),
                 ],
               ),
             ),

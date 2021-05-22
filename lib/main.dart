@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 const appTitle = 'Единая Карта Города';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
