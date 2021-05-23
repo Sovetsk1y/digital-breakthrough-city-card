@@ -8,6 +8,7 @@ import 'package:city_card_novoros/features/home/home_body/components/category_co
 import 'package:city_card_novoros/features/home/home_body/home_body_model.dart';
 import 'package:city_card_novoros/features/parking/parking_map_page.dart';
 import 'package:city_card_novoros/features/reservations/components/my_reservations_bottom_sheet.dart';
+import 'package:city_card_novoros/features/restaurants/restaurants_page.dart';
 import 'package:city_card_novoros/utils/app_colors.dart';
 import 'package:city_card_novoros/utils/styles.dart';
 import 'package:flutter/cupertino.dart';
@@ -25,12 +26,15 @@ class HomeBody extends StatefulWidget {
 
 class _HomeBodyState extends State<HomeBody> {
   void _navigateToCategory(int index) {
+    final role = RoleProvider.of(context)!.role;
     switch (index) {
       case 0:
         // Navigator.of(context).push(MaterialPageRoute(builder: (context) => ));
         break;
       case 1:
-        // Navigator.of(context).push(MaterialPageRoute(builder: (context) => ));
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) =>
+                RoleProvider(role: role, child: RestaurantsPage())));
         break;
       case 2:
         Navigator.of(context)

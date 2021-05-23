@@ -4,8 +4,8 @@ import 'package:city_card_novoros/utils/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PaySuccessDialog extends StatelessWidget {
-  const PaySuccessDialog({Key? key}) : super(key: key);
+class RestaurantReservedDialog extends StatelessWidget {
+  const RestaurantReservedDialog({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class PaySuccessDialog extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                'Оплата прошла успешно',
+                'Стол забронирован',
                 textAlign: TextAlign.center,
                 style: secondaryTextRegular17.copyWith(color: AppColors.grey1),
               ),
