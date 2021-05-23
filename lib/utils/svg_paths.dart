@@ -9,3 +9,4 @@ const cultureSvgPath = 'assets/icons/culture.svg';
 const parkingSvgPath = 'assets/icons/parking.svg';
 const timerSvgPath = 'assets/icons/timer.svg';
 const chevronDownSvgPath = 'assets/icons/chevron_down.svg';
+const archievedSvgPath = 'assets/icons/archieved.svg';

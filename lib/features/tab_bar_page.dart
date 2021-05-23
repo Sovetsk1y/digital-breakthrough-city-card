@@ -53,7 +53,7 @@ class _TabBarPageState extends State<TabBarPage> {
       case 1:
         return HomePage();
       case 2:
-        return FeedbackPage();
+        return Scaffold();
       default:
         return Scaffold();
     }
