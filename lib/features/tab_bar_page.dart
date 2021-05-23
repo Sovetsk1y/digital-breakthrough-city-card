@@ -1,4 +1,5 @@
 import 'package:city_card_novoros/features/feedback/feedback_page.dart';
+import 'package:city_card_novoros/features/profile/profile_page.dart';
 import 'package:city_card_novoros/utils/svg_paths.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +54,7 @@ class _TabBarPageState extends State<TabBarPage> {
       case 1:
         return HomePage();
       case 2:
-        return Scaffold();
+        return ProfilePage();
       default:
         return Scaffold();
     }
