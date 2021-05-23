@@ -1,3 +1,4 @@
+import 'package:city_card_novoros/domain/role.dart';
 import 'package:city_card_novoros/features/home/home_body/home_body_model.dart';
 import 'package:city_card_novoros/utils/app_colors.dart';
 import 'package:city_card_novoros/utils/styles.dart';
@@ -6,9 +7,12 @@ import 'package:flutter_svg/svg.dart';
 
 class CategoryContainer extends StatelessWidget {
   final CategoryData category;
+  final Role role;
+
   const CategoryContainer({
     Key? key,
     required this.category,
+    required this.role,
   }) : super(key: key);
 
   @override
@@ -42,7 +46,7 @@ class CategoryContainer extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 6),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: AppColors.citizenOrange,
+                  color: role.color,
                 ),
                 child: Center(
                   child: Text(

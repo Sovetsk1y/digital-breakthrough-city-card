@@ -7,10 +7,12 @@ import 'package:city_card_novoros/features/feedback/feedback_page.dart';
 import 'package:city_card_novoros/features/home/home_body/components/category_container.dart';
 import 'package:city_card_novoros/features/home/home_body/home_body_model.dart';
 import 'package:city_card_novoros/features/parking/parking_map_page.dart';
+import 'package:city_card_novoros/features/reservations/components/my_reservations_bottom_sheet.dart';
 import 'package:city_card_novoros/utils/app_colors.dart';
 import 'package:city_card_novoros/utils/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 import 'components/role_card.dart';
 
@@ -77,8 +79,10 @@ class _HomeBodyState extends State<HomeBody> {
                       itemBuilder: (context, index) {
                         return BouncingButton(
                             onTap: () => _navigateToCategory(index),
-                            child:
-                                CategoryContainer(category: categories[index]));
+                            child: CategoryContainer(
+                              role: role,
+                              category: categories[index],
+                            ));
                       })),
             ],
           ),
@@ -94,6 +98,7 @@ class _HomeBodyState extends State<HomeBody> {
   }
 
   Container _buildReservationButton() {
+    final role = RoleProvider.of(context)!.role;
     return Container(
       height: MediaQuery.of(context).size.height * 0.3,
       decoration: BoxDecoration(
@@ -111,10 +116,19 @@ class _HomeBodyState extends State<HomeBody> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: AppButton(
+                onTap: () {
+                  showMaterialModalBottomSheet(
+                      animationCurve: Curves.easeInOut,
+                      context: context,
+                      backgroundColor: Colors.transparent,
+                      expand: true,
+                      builder: (context) => RoleProvider(
+                          role: role, child: MyReservationsBottomSheet()));
+                },
                 child: Text(
-              'Мои покупки / бронирования',
-              style: primaryTextSemiBold17.copyWith(color: Colors.white),
-            )),
+                  'Мои покупки / бронирования',
+                  style: primaryTextSemiBold17.copyWith(color: Colors.white),
+                )),
           ),
           const SizedBox(height: 8),
         ],
