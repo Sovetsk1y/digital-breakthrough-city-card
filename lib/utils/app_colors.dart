@@ -8,9 +8,9 @@ class AppColors {
 
   static const citizenOrange = Color(0xffFDAF23);
 
-  static const touristBlue = Color(0xff326591);
+  static const touristBlue = Color(0xff1F7AAE);
 
-  static const studentGreen = Color(0xff238E4B);
+  static const studentGreen = Color(0xff3CA563);
 
   static final tabBarGrey = Color(0xffB7B7B7).withOpacity(0.36);
   static final labelQuan = Color(0xff000000).withOpacity(0.1);
